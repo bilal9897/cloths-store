@@ -108,7 +108,7 @@ export default function Rail3D({
                   scrollToPiece(idx);
                 }
               }}
-              aria-label={`${p.name} in ${p.colour}, $${p.price}`}
+              aria-label={`${p.name} in ${p.colour}, KD ${p.price}`}
             >
               <img
                 src={`${ASSET_BASE}/${p.id}-front.webp`}
@@ -146,7 +146,7 @@ export default function Rail3D({
             </div>
           </dl>
           <div className="rk-buy">
-            <span>${product.price}</span>
+            <span>KD {product.price}</span>
             <button type="button" onClick={() => onSelectProduct(activeIdx)}>
               View details <i aria-hidden="true">↗</i>
             </button>

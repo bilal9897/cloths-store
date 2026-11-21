@@ -9,7 +9,7 @@ interface HeaderProps {
 export default function Header({ bagCount, onOpenBag, bagRef }: HeaderProps) {
   return (
     <header className="hd">
-      <a className="hd-mark" href="#rail">HALE</a>
+      <a className="hd-mark" href="#rail">CentrePoint</a>
       <nav className="hd-nav" aria-label="Main">
         <a href="#rail">Rail</a>
         <a href="#lookbook">Lookbook</a>

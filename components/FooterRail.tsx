@@ -28,13 +28,13 @@ export default function FooterRail({ onSelectProduct }: { onSelectProduct: (idx:
               type="button"
               className="fr-item"
               onClick={() => onSelectProduct(idx)}
-              aria-label={`${p.name} in ${p.colour}, $${p.price}`}
+              aria-label={`${p.name} in ${p.colour}, KD ${p.price}`}
             >
               <span className="fr-swing">
                 <img src={`${ASSET_BASE}/${p.id}-front.webp`} alt="" draggable={false} loading="lazy" />
               </span>
               <span className="fr-tag">
-                <b>{p.name}</b> ${p.price}
+                <b>{p.name}</b> KD {p.price}
               </span>
             </button>
           ))}
@@ -91,12 +91,12 @@ export default function FooterRail({ onSelectProduct }: { onSelectProduct: (idx:
         </div>
 
         <div className="fd-mark" style={{ backgroundImage: `url(${ASSET_BASE}/strip-5.webp)` }} aria-hidden="true">
-          HALE
+          CentrePoint
         </div>
 
         <div className="fd-base">
-          <span>© 2026 HALE Studio</span>
-          <span>HALE is a demo brand. Clothing, names and prices are placeholders.</span>
+          <span>© 2026 CentrePoint Studio</span>
+          <span>CentrePoint is a demo brand. Clothing, names and prices are placeholders.</span>
           <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             Back to the rail ↑
           </button>

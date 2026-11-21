@@ -75,7 +75,7 @@ export default function TryItOn({ onSelectProduct }: { onSelectProduct: (idx: nu
           <b>{product.name}</b>
           <em>in {product.colour}</em>
           <span className="to-buy">
-            <span>${product.price}</span>
+            <span>KD {product.price}</span>
             <button type="button" onClick={() => onSelectProduct(activeIdx)}>
               View piece
             </button>

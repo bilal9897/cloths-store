@@ -20,7 +20,7 @@ export default function CartDrawer({
     return sum + (prod ? prod.price * item.qty : 0);
   }, 0);
 
-  const freeShippingThreshold = 250;
+  const freeShippingThreshold = 75;
   const remainingForFreeShipping = Math.max(0, freeShippingThreshold - subtotal);
   const shippingProgress = Math.min(1, subtotal / freeShippingThreshold);
 
@@ -36,7 +36,7 @@ export default function CartDrawer({
         <div className="bag-ship">
           <p>
             {remainingForFreeShipping > 0
-              ? `You are $${remainingForFreeShipping} away from free shipping`
+              ? `You are KD ${remainingForFreeShipping} away from free shipping`
               : "Shipping is on us"}
           </p>
           <i>
@@ -65,7 +65,7 @@ export default function CartDrawer({
                       <button type="button" onClick={() => onUpdateQty(item, 1)} aria-label="One more">+</button>
                     </div>
                   </div>
-                  <span className="bag-price">${product.price * item.qty}</span>
+                  <span className="bag-price">KD {product.price * item.qty}</span>
                 </li>
               );
             })
@@ -75,7 +75,7 @@ export default function CartDrawer({
         <div className="bag-foot">
           <p>
             <span>Subtotal</span>
-            <b>${subtotal}</b>
+            <b>KD {subtotal}</b>
           </p>
           <button type="button" disabled={items.length === 0}>
             Checkout

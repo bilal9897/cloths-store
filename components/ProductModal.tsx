@@ -148,7 +148,7 @@ export default function ProductModal({
           <h2 className="pv-name">
             {product.name} <em>in {product.colour}</em>
           </h2>
-          <p className="pv-price">${product.price}</p>
+          <p className="pv-price">KD {product.price}</p>
           <p className="pv-blurb">{product.blurb}</p>
 
           <div className="pv-sizehead">
@@ -195,10 +195,10 @@ export default function ProductModal({
             }}
           >
             <span>{isAdded ? "Added to bag" : "Add to bag"}</span>
-            <span>${product.price}</span>
+            <span>KD {product.price}</span>
           </button>
 
-          <p className="pv-small">Free shipping over $250 · Returns in 30 days</p>
+          <p className="pv-small">Free shipping over KD 75 · Returns in 30 days</p>
 
           <dl className="pv-specs">
             <div>
