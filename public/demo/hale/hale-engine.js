@@ -2,14 +2,14 @@
   console.log('[HALE FULL ENGINE] Initializing rack, model, and interactive components...');
 
   const PRODUCTS = [
-    { id: "02", name: "Hoodie", colour: "Oat", price: 120, fabric: "Loopback cotton, 480 gsm", fit: "Boxy, cropped sleeve", sizes: ["XS","S","M","L","XL"], blurb: "Heavyweight loopback with a double-layer hood. No drawcord, no logo, nothing to fiddle with." },
-    { id: "01", name: "Overshirt", colour: "Bone", price: 145, fabric: "Heavy cotton twill, 340 gsm", fit: "Relaxed, drops at the hip", sizes: ["S","M","L","XL"], blurb: "A shirt cut like a jacket. Two chest pockets, a deep back pleat and a twill that softens with every wash." },
-    { id: "03", name: "Camp Shirt", colour: "Stone", price: 110, fabric: "Washed linen", fit: "Straight, long sleeve", sizes: ["XS","S","M","L"], blurb: "Stone-washed linen with a flat camp collar. Wear it buttoned to the top or open over a tee." },
-    { id: "04", name: "Chore Jacket", colour: "Olive", price: 185, fabric: "Garment-dyed cotton canvas", fit: "Regular, room for a knit", sizes: ["XS","S","M","L","XL"], blurb: "The workwear classic in a dense canvas, dyed after sewing so every seam fades its own way. Three patch pockets, corozo buttons." },
-    { id: "05", name: "Overcoat", colour: "Charcoal", price: 420, fabric: "Wool and cashmere, 80/20", fit: "Long, single-breasted", sizes: ["XS","M","L","XL"], blurb: "A long single-breasted coat in a brushed wool-cashmere. Half-lined so it sits right over a suit or a hoodie." },
-    { id: "06", name: "Cable Knit", colour: "Navy", price: 165, fabric: "Lambswool, 5 gauge", fit: "Regular, ribbed hem", sizes: ["XS","S","M","L","XL"], blurb: "Chunky lambswool cables, knitted on old hand-frames. Warm enough to wear as a jacket in October." },
-    { id: "07", name: "Shirt Jacket", colour: "Rust", price: 160, fabric: "8-wale cotton corduroy", fit: "Boxy, hip length", sizes: ["S","M","L"], blurb: "Soft corduroy in a warm rust, with two flap pockets and a straight hem. Layers over the knit, under the coat." },
-    { id: "08", name: "Bomber", colour: "Black", price: 210, fabric: "Japanese nylon twill", fit: "Classic bomber, ribbed trims", sizes: ["XS","S","M","L","XL"], blurb: "Water-repellent Japanese flight nylon with wool-blend ribbing and a storm flap. Minimalist, indestructible." }
+    { id: "02", name: "Hoodie", colour: "Oat", price: 37, fabric: "Loopback cotton, 480 gsm", fit: "Boxy, cropped sleeve", sizes: ["XS","S","M","L","XL"], blurb: "Heavyweight loopback with a double-layer hood. No drawcord, no logo, nothing to fiddle with." },
+    { id: "01", name: "Overshirt", colour: "Bone", price: 45, fabric: "Heavy cotton twill, 340 gsm", fit: "Relaxed, drops at the hip", sizes: ["S","M","L","XL"], blurb: "A shirt cut like a jacket. Two chest pockets, a deep back pleat and a twill that softens with every wash." },
+    { id: "03", name: "Camp Shirt", colour: "Stone", price: 34, fabric: "Washed linen", fit: "Straight, long sleeve", sizes: ["XS","S","M","L"], blurb: "Stone-washed linen with a flat camp collar. Wear it buttoned to the top or open over a tee." },
+    { id: "04", name: "Chore Jacket", colour: "Olive", price: 57, fabric: "Garment-dyed cotton canvas", fit: "Regular, room for a knit", sizes: ["XS","S","M","L","XL"], blurb: "The workwear classic in a dense canvas, dyed after sewing so every seam fades its own way. Three patch pockets, corozo buttons." },
+    { id: "05", name: "Overcoat", colour: "Charcoal", price: 129, fabric: "Wool and cashmere, 80/20", fit: "Long, single-breasted", sizes: ["XS","M","L","XL"], blurb: "A long single-breasted coat in a brushed wool-cashmere. Half-lined so it sits right over a suit or a hoodie." },
+    { id: "06", name: "Cable Knit", colour: "Navy", price: 51, fabric: "Lambswool, 5 gauge", fit: "Regular, ribbed hem", sizes: ["XS","S","M","L","XL"], blurb: "Chunky lambswool cables, knitted on old hand-frames. Warm enough to wear as a jacket in October." },
+    { id: "07", name: "Shirt Jacket", colour: "Rust", price: 49, fabric: "8-wale cotton corduroy", fit: "Boxy, hip length", sizes: ["S","M","L"], blurb: "Soft corduroy in a warm rust, with two flap pockets and a straight hem. Layers over the knit, under the coat." },
+    { id: "08", name: "Bomber", colour: "Black", price: 65, fabric: "Japanese nylon twill", fit: "Classic bomber, ribbed trims", sizes: ["XS","S","M","L","XL"], blurb: "Water-repellent Japanese flight nylon with wool-blend ribbing and a storm flap. Minimalist, indestructible." }
   ];
   const aH = PRODUCTS.length;
   const aW = (t, e, r) => Math.max(e === undefined ? 0 : e, Math.min(r === undefined ? 1 : r, t));
@@ -184,7 +184,7 @@
           if (rkN) rkN.innerHTML = String(activeIdx + 1).padStart(2, "0") + " / " + String(aH).padStart(2, "0");
           if (nameEl) nameEl.innerHTML = p.name + ' <em>in ' + p.colour + '</em>';
           if (blurbEl) blurbEl.textContent = p.blurb;
-          if (priceEl) priceEl.innerHTML = "$" + p.price;
+          if (priceEl) priceEl.innerHTML = "KD " + p.price;
           if (specsEl) {
             specsEl.innerHTML = '<div><dt>Material</dt><dd>' + p.fabric + '</dd></div><div><dt>Fit</dt><dd>' + p.fit + '</dd></div><div><dt>Size</dt><dd>' + p.sizes.join(" / ") + '</dd></div>';
           }
@@ -342,7 +342,7 @@
           if (nSpan) nSpan.textContent = String(activePiece + 1).padStart(2, "0") + " / " + String(aH).padStart(2, "0");
           if (nameEl) nameEl.textContent = pr.name;
           if (colEl) colEl.textContent = "in " + pr.colour;
-          if (priceEl) priceEl.textContent = "$" + pr.price;
+          if (priceEl) priceEl.textContent = "KD " + pr.price;
           toInfo.classList.add("is-in");
         }
         toIndexItems.forEach((li, idx) => li.classList.toggle("is-on", idx === activePiece));
@@ -487,7 +487,7 @@
       modalHtml += '<div style="display:flex;flex-direction:column;justify-content:space-between;">';
       modalHtml += '<div><p style="font-family:monospace;font-size:11px;color:#706b63;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 8px 0;">' + p.id + ' / 08 — ' + p.colour + '</p>';
       modalHtml += '<h2 style="font-family:var(--font-serif, Georgia, serif);font-size:clamp(32px, 3.5vw, 48px);font-weight:400;margin:0 0 16px 0;letter-spacing:-0.03em;line-height:1;">' + p.name + '</h2>';
-      modalHtml += '<p style="font-size:24px;font-weight:500;margin:0 0 20px 0;">$' + p.price + '</p>';
+      modalHtml += '<p style="font-size:24px;font-weight:500;margin:0 0 20px 0;">KD ' + p.price + '</p>';
       modalHtml += '<p style="color:#3d3a35;font-size:14px;line-height:1.6;margin:0 0 24px 0;">' + p.blurb + '</p>';
       modalHtml += '<div style="border-top:1px solid #0e0c0a14;border-bottom:1px solid #0e0c0a14;padding:16px 0;margin-bottom:24px;font-size:13px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">';
       modalHtml += '<div><strong style="color:#706b63;font-size:11px;text-transform:uppercase;font-family:monospace;display:block;">Material</strong>' + p.fabric + '</div>';
@@ -498,7 +498,7 @@
         modalHtml += '<button class="modal-size-btn ' + (s === selectedSize ? 'is-selected' : '') + '" data-size="' + s + '" type="button" style="border:1px solid ' + (s === selectedSize ? '#0e0c0a' : '#0e0c0a22') + ';background:' + (s === selectedSize ? '#0e0c0a' : '#fff') + ';color:' + (s === selectedSize ? '#f6f4ef' : '#0e0c0a') + ';padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:all 0.2s;">' + s + '</button>';
       });
       modalHtml += '</div></div></div>';
-      modalHtml += '<button id="modal-add-bag" type="button" style="background:#0e0c0a;color:#f6f4ef;border:none;border-radius:99px;padding:16px 28px;font-size:14px;font-weight:500;cursor:pointer;width:100%;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;">Add to Bag — $' + p.price + '</button>';
+      modalHtml += '<button id="modal-add-bag" type="button" style="background:#0e0c0a;color:#f6f4ef;border:none;border-radius:99px;padding:16px 28px;font-size:14px;font-weight:500;cursor:pointer;width:100%;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;">Add to Bag — KD ' + p.price + '</button>';
       modalHtml += '</div></div>';
       modal.innerHTML = modalHtml;
 
@@ -563,7 +563,7 @@
         window.HALE_CART.forEach((item, idx) => {
           dHtml += '<div style="display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;background:#fff;padding:12px;border-radius:8px;border:1px solid #0e0c0a10;">';
           dHtml += '<img src="/demo/hale/img/' + item.id + '-front.webp" alt="' + item.name + '" style="width:64px;height:64px;object-fit:contain;background:#ebe7e0;border-radius:4px;" />';
-          dHtml += '<div><h4 style="margin:0 0 4px 0;font-size:14px;font-weight:600;">' + item.name + '</h4><p style="margin:0;font-size:12px;color:#706b63;">' + item.colour + ' / Size ' + item.size + '</p><p style="margin:4px 0 0 0;font-size:13px;font-weight:500;">$' + item.price + ' × ' + item.qty + '</p></div>';
+          dHtml += '<div><h4 style="margin:0 0 4px 0;font-size:14px;font-weight:600;">' + item.name + '</h4><p style="margin:0;font-size:12px;color:#706b63;">' + item.colour + ' / Size ' + item.size + '</p><p style="margin:4px 0 0 0;font-size:13px;font-weight:500;">KD ' + item.price + ' × ' + item.qty + '</p></div>';
           dHtml += '<button class="remove-cart-item" data-idx="' + idx + '" style="background:none;border:none;color:#999;cursor:pointer;padding:6px;font-size:16px;">✕</button></div>';
         });
         dHtml += '</div>';
@@ -571,7 +571,7 @@
       dHtml += '</div>';
 
       dHtml += '<div style="border-top:1px solid #0e0c0a14;padding-top:20px;">';
-      dHtml += '<div style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:16px;font-weight:600;"><span>Subtotal</span><span>$' + total + '</span></div>';
+      dHtml += '<div style="display:flex;justify-content:space-between;margin-bottom:18px;font-size:16px;font-weight:600;"><span>Subtotal</span><span>KD ' + total + '</span></div>';
       dHtml += '<button id="checkout-btn" ' + (window.HALE_CART.length === 0 ? 'disabled' : '') + ' style="width:100%;background:' + (window.HALE_CART.length === 0 ? '#ccc' : '#0e0c0a') + ';color:#f6f4ef;border:none;border-radius:99px;padding:16px;font-size:14px;font-weight:500;cursor:' + (window.HALE_CART.length === 0 ? 'default' : 'pointer') + ';">Checkout</button>';
       dHtml += '</div></div>';
 
